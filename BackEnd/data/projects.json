@@ -195,14 +195,13 @@
     "slug": "dynamic-spline-mesh",
     "title": "DynamicSplineMesh",
     "tagline": "Outil de level design à base de courbes de Bézier",
-    "summary": "Outil Unreal Engine développé pour la préproduction d'Aohri's Uprising : les graphistes agencent leurs meshes le long d'une spline, avec prévisualisation en temps réel.",
+    "summary": "Outil Unreal Engine développé pour Aohri's Uprising, notre jeu étudiant : les graphistes agencent et déforment leurs meshes le long d'une spline, avec prévisualisation en temps réel.",
     "domain": "game",
     "category": "tool",
-    "context": "Studio",
-    "client": "Aohri's Uprising",
+    "context": "Formation",
     "year": 2023,
     "duration": "Préproduction",
-    "team": "Équipe de production",
+    "team": "Équipe d'Aohri's Uprising",
     "role": "Tools programmer",
     "status": "Terminé",
     "featured": true,
@@ -213,7 +212,7 @@
       "Splines",
       "Outils éditeur"
     ],
-    "cover": "/projects/dynamic-spline-mesh/aspect.png",
+    "cover": "/projects/dynamic-spline-mesh/deformation.jpg",
     "highlights": [
       "Génération de maillage 3D le long d'une courbe de Bézier",
       "Placement, rotation (régulière, irrégulière, par groupe) et composition de meshes",
@@ -229,7 +228,7 @@
       {
         "heading": "Contexte",
         "paragraphs": [
-          "Dans le cadre de la préproduction du jeu Aohri's Uprising, le lead graphiste m'a confié le développement d'un outil de level design pour faciliter l'agencement des meshes créés par l'équipe dans les différents niveaux.",
+          "Pendant la préproduction d'Aohri's Uprising, notre jeu de fin d'études, le lead graphiste m'a confié le développement d'un outil de level design pour faciliter l'agencement des meshes créés par l'équipe dans les différents niveaux.",
           "La courbe de maillage dynamique en est l'élément central : elle construit un maillage 3D à partir d'une courbe de Bézier, dont les points de contrôle offrent une grande souplesse pour créer des formes complexes."
         ]
       },
@@ -251,6 +250,11 @@
       }
     ],
     "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/dynamic-spline-mesh/deformation.jpg",
+        "caption": "Déformation : le mesh épouse la forme des obstacles"
+      },
       {
         "type": "image",
         "src": "/projects/dynamic-spline-mesh/aspect.png",
@@ -389,14 +393,13 @@
     "slug": "frustum-culling",
     "title": "Frustum Culling",
     "tagline": "Octree et frustum culling pour optimiser le rendu sous Unreal Engine",
-    "summary": "Système d'octree couplé à un frustum culling pour n'afficher que les objets visibles par la caméra, développé pour Aohri's Uprising.",
+    "summary": "Système d'octree couplé à un frustum culling pour n'afficher que les objets visibles par la caméra, développé pour Aohri's Uprising, notre jeu étudiant.",
     "domain": "game",
     "category": "tool",
-    "context": "Studio",
-    "client": "Aohri's Uprising",
+    "context": "Formation",
     "year": 2023,
     "duration": "Préproduction",
-    "team": "Équipe de production",
+    "team": "Équipe d'Aohri's Uprising",
     "role": "Tools programmer",
     "status": "Terminé",
     "featured": true,
@@ -786,46 +789,6 @@
     "hero": 2
   },
   {
-    "id": 16,
-    "slug": "custom-world-partition",
-    "title": "Custom World Partition",
-    "tagline": "Streaming de monde ouvert fait maison",
-    "summary": "Réimplémentation d'un système de World Partition sous Unreal Engine : octree, sources de streaming et chargement dynamique des zones autour des joueurs.",
-    "domain": "game",
-    "category": "tool",
-    "context": "Personnel",
-    "year": 2025,
-    "duration": "R&D",
-    "team": "Solo",
-    "role": "Programmeur moteur",
-    "status": "Prototype",
-    "featured": false,
-    "order": 11,
-    "technologies": [
-      "C++",
-      "Unreal Engine",
-      "Octree",
-      "Optimisation",
-      "Multijoueur"
-    ],
-    "cover": null,
-    "highlights": [
-      "Octree de partitionnement du monde",
-      "Composants de streaming et de vision par joueur",
-      "Stream manager compatible multijoueur"
-    ],
-    "links": {},
-    "content": [
-      {
-        "heading": "Le projet",
-        "paragraphs": [
-          "Projet de R&D visant à comprendre et reproduire le World Partition d'Unreal Engine : le monde est découpé via un octree et seules les cellules proches des sources de streaming (joueurs) sont chargées."
-        ]
-      }
-    ],
-    "gallery": []
-  },
-  {
     "id": 17,
     "slug": "worknest",
     "title": "WorkNest",
@@ -997,7 +960,7 @@
       "Unity",
       "Shaders (HLSL)"
     ],
-    "cover": null,
+    "cover": "/projects/the-forest-like/jour.jpg",
     "highlights": [
       "3C : caméras orbitale et TPS, déplacements et animations du personnage",
       "Besoins du joueur (faim, soif) et ressources comestibles ou non",
@@ -1025,7 +988,23 @@
         ]
       }
     ],
-    "gallery": []
+    "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/the-forest-like/jour.jpg",
+        "caption": "14h, 20 °C : jauges de faim, soif, santé et température"
+      },
+      {
+        "type": "image",
+        "src": "/projects/the-forest-like/soir.jpg",
+        "caption": "17h, 10 °C : le soleil décline, la récolte est en cours"
+      },
+      {
+        "type": "image",
+        "src": "/projects/the-forest-like/nuit.jpg",
+        "caption": "21h, 2 °C : la nuit tombe et la température chute"
+      }
+    ]
   },
   {
     "id": 20,
@@ -1129,7 +1108,7 @@
       ".NET Framework",
       "JSON"
     ],
-    "cover": null,
+    "cover": "/projects/flight-tracker/cover.jpg",
     "highlights": [
       "Interface WPF (XAML)",
       "Chargement d'une base d'aéroports en JSON (Newtonsoft.Json)",
@@ -1147,6 +1126,90 @@
         ]
       }
     ],
-    "gallery": []
+    "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/flight-tracker/cover.jpg",
+        "caption": "Liste des vols en cours : départ, arrivée et progression (noms des pilotes floutés)"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "slug": "aohris-uprising",
+    "title": "Aohri's Uprising",
+    "tagline": "Jeu de tir à la troisième personne, sorti sur Steam",
+    "summary": "Notre jeu de fin d'études, sorti gratuitement sur Steam : la guerrière Aohri, armée de son arc, part affronter son dieu déchu. J'étais lead sur le projet et j'ai développé ses outils de production.",
+    "domain": "game",
+    "category": "game",
+    "context": "Formation",
+    "year": 2023,
+    "duration": "Projet de fin d'études",
+    "team": "Équipe d'étudiants Objectif3D",
+    "role": "Lead du projet",
+    "status": "Terminé",
+    "featured": true,
+    "technologies": [
+      "Unreal Engine",
+      "C++",
+      "Outils éditeur",
+      "Optimisation"
+    ],
+    "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2200400/capsule_616x353.jpg",
+    "highlights": [
+      "Sorti gratuitement sur Steam le 26 juin 2023",
+      "Lead de l'équipe étudiante",
+      "Outil de level design DynamicSplineMesh",
+      "Octree, frustum culling et pooling trigger pour les performances"
+    ],
+    "links": {
+      "steam": "https://store.steampowered.com/app/2200400/Aohris_Uprising/"
+    },
+    "content": [
+      {
+        "heading": "Le jeu",
+        "paragraphs": [
+          "Après de multiples cataclysmes, la tribu d'Aohri perd foi en son dieu et envoie sa guerrière la plus farouche mettre fin à son courroux. Dans ce jeu de tir à la troisième personne, le joueur tire, dash, modifie ses tirs et ralentit les projectiles ennemis pour survivre dans un monde rempli de pièges : tours, plateformes qui se brisent, lames et haches de temple."
+        ]
+      },
+      {
+        "heading": "Mon rôle",
+        "paragraphs": [
+          "J'étais lead sur ce projet de fin d'études. J'ai également développé les outils qui ont servi à toute l'équipe :"
+        ],
+        "list": [
+          "DynamicSplineMesh : outil de level design à base de splines pour les graphistes",
+          "Octree et frustum culling pour n'afficher que ce que voit la caméra",
+          "Pooling trigger pour optimiser les performances"
+        ]
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2200400/ss_9241c3bc338c1b01040d7a3b84ac9cbe7836fb4c.1920x1080.jpg",
+        "caption": "Capture officielle — Steam"
+      },
+      {
+        "type": "image",
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2200400/ss_46d726d8f15f54b8895ebdbaf3d8d90c7586b4a0.1920x1080.jpg",
+        "caption": "Capture officielle — Steam"
+      },
+      {
+        "type": "image",
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2200400/ss_6aab193bb22454265bc8964b729684e58b1c6636.1920x1080.jpg",
+        "caption": "Capture officielle — Steam"
+      },
+      {
+        "type": "image",
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2200400/ss_63993997836bf6ef0eed54b67a2799809859dba6.1920x1080.jpg",
+        "caption": "Capture officielle — Steam"
+      },
+      {
+        "type": "image",
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2200400/ss_fe4bd78ea792698708261b45e42d57bd7616d081.1920x1080.jpg",
+        "caption": "Capture officielle — Steam"
+      }
+    ]
   }
 ]
