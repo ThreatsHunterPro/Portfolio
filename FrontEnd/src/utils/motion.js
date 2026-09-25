@@ -1,0 +1,17 @@
+// Variantes Framer Motion partagées
+
+export const pageTransition = {
+  initial: { opacity: 0, y: 12 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } },
+  exit: { opacity: 0, y: -8, transition: { duration: 0.2, ease: "easeIn" } },
+};
+
+export const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
+};
+
+export const stagger = (delay = 0.08) => ({
+  hidden: {},
+  visible: { transition: { staggerChildren: delay } },
+});

@@ -1,0 +1,954 @@
+[
+  {
+    "id": 1,
+    "slug": "ecoride",
+    "title": "EcoRide",
+    "tagline": "Application web de covoiturage écoresponsable",
+    "summary": "Plateforme full-stack de covoiturage mettant en avant les trajets en véhicule électrique : recherche filtrée, réservation, système de crédits et espaces administrateur / employé.",
+    "domain": "web",
+    "category": "web",
+    "context": "Formation",
+    "year": 2026,
+    "duration": "Projet ECF",
+    "team": "Solo",
+    "role": "Développeur full-stack",
+    "status": "En cours",
+    "featured": true,
+    "order": 1,
+    "technologies": [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Node.js",
+      "Express",
+      "JWT",
+      "PostgreSQL",
+      "Supabase",
+      "MongoDB",
+      "Docker",
+      "Vitest"
+    ],
+    "cover": "/projects/ecoride/accueil.jpg",
+    "highlights": [
+      "Authentification JWT et gestion des rôles (visiteur, utilisateur, employé, admin)",
+      "Recherche de trajets avec filtres (écologique, prix, note)",
+      "Système de crédits : 20 crédits offerts à l'inscription",
+      "Dashboard administrateur : statistiques et gestion des utilisateurs",
+      "Double base de données : Supabase (PostgreSQL) + MongoDB pour les logs",
+      "Monorepo dockerisé, front sur Vercel et API sur Render"
+    ],
+    "links": {
+      "github": "https://github.com/ThreatsHunterPro/EcoRide",
+      "demo": "",
+      "docs": ""
+    },
+    "content": [
+      {
+        "heading": "Le projet",
+        "paragraphs": [
+          "EcoRide est une application de covoiturage écologique réalisée dans le cadre d'une évaluation full-stack (ECF). Elle permet de proposer et réserver des trajets tout en valorisant les critères environnementaux, comme l'usage de véhicules électriques.",
+          "Le projet est structuré en monorepo : l'application cliente et l'API sont regroupées pour centraliser l'infrastructure et simplifier le déploiement."
+        ]
+      },
+      {
+        "heading": "Architecture",
+        "paragraphs": [
+          "Le projet applique le principe de séparation des préoccupations à travers trois environnements distincts, chacun avec son propre package.json, sur une architecture MVP (Model - View - Presenter)."
+        ],
+        "list": [
+          "Racine : infrastructure globale (Docker Compose) et lancement simultané des deux applications",
+          "BackEnd : API Express autonome (routes, authentification, logique métier, accès aux données)",
+          "FrontEnd : application React (interface, navigation, logique client)"
+        ]
+      },
+      {
+        "heading": "Difficultés rencontrées",
+        "list": [
+          "Mise en place d'une architecture claire et isolée entre le front et le back",
+          "Gestion sécurisée de l'authentification (JWT et protection des routes)",
+          "Synchronisation et requêtage entre deux technologies de bases de données (SQL et NoSQL)"
+        ]
+      },
+      {
+        "heading": "Prochaines étapes",
+        "list": [
+          "Notifications en temps réel",
+          "Intégration d'un système de paiement",
+          "Déclinaison en application mobile"
+        ]
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/ecoride/accueil.jpg",
+        "caption": "Page d'accueil et recherche de trajet"
+      },
+      {
+        "type": "image",
+        "src": "/projects/ecoride/connexion.jpg",
+        "caption": "Connexion / inscription"
+      },
+      {
+        "type": "image",
+        "src": "/projects/ecoride/wireframe.png",
+        "caption": "Wireframes de l'application"
+      },
+      {
+        "type": "image",
+        "src": "/projects/ecoride/mcd.png",
+        "caption": "Modèle conceptuel de données (MCD)"
+      },
+      {
+        "type": "image",
+        "src": "/projects/ecoride/mld.png",
+        "caption": "Modèle logique de données (MLD)"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "unireal",
+    "title": "Unireal",
+    "tagline": "Prototype de moteur de jeu 3D en C++",
+    "summary": "Mon propre moteur de jeu : l'ergonomie de l'éditeur Unity combinée à l'architecture objet d'Unreal Engine, pour comprendre de l'intérieur les choix des grands moteurs.",
+    "domain": "game",
+    "category": "engine",
+    "context": "Personnel",
+    "year": 2023,
+    "duration": "Projet de fin d'études",
+    "team": "Solo",
+    "role": "Programmeur moteur",
+    "status": "Terminé",
+    "featured": true,
+    "order": 3,
+    "technologies": [
+      "C++",
+      "OpenGL",
+      "GLFW",
+      "ImGui",
+      "CMake"
+    ],
+    "cover": "/projects/unireal/cover.png",
+    "highlights": [
+      "Éditeur complet : Outliner, Scene, Game, Inspector, Content Browser, Console, Préférences",
+      "Core maison : Array, String, Delegate, Vectors",
+      "Architecture objet inspirée d'Unreal : World, Object, Actor, SceneComponent, StaticMeshComponent",
+      "Managers dédiés : Timer, Camera, Input",
+      "Game loop et rendu 3D via OpenGL"
+    ],
+    "links": {
+      "github": "https://github.com/ThreatsHunterPro/Unireal",
+      "demo": "",
+      "docs": ""
+    },
+    "content": [
+      {
+        "heading": "Pourquoi « Unireal » ?",
+        "paragraphs": [
+          "Chaque langage et chaque moteur apporte des fonctionnalités que d'autres n'ont pas, mais aussi leurs inconvénients. J'ai voulu comprendre pourquoi certaines incohérences, qui me semblaient évidentes à résoudre, persistent toujours.",
+          "Pour cela, rien de mieux que de prototyper mon propre moteur à partir de ce que je connaissais : l'apparence de l'éditeur de Unity et l'architecture objet mise en place par Epic Games."
+        ]
+      },
+      {
+        "heading": "Objectifs",
+        "list": [
+          "Comprendre les incohérences présentes dans les moteurs de jeux actuels",
+          "Appliquer les connaissances acquises pendant trois années de formation",
+          "Créer une interface graphique conviviale inspirée de l'éditeur Unity",
+          "Adopter une architecture objet facilitant la création de jeux complexes"
+        ]
+      },
+      {
+        "heading": "Conclusion",
+        "paragraphs": [
+          "Certaines « incohérences » persistent en raison de contraintes architecturales. Accepter ces contraintes apporte en réalité une logique et une simplicité d'exécution notables : ce projet m'a amené à les voir comme des opportunités plutôt que comme des défauts."
+        ]
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/unireal/cover.png",
+        "caption": "L'éditeur Unireal"
+      },
+      {
+        "type": "image",
+        "src": "/projects/unireal/render-widget.png",
+        "caption": "RenderWidget : rendu de la scène"
+      },
+      {
+        "type": "image",
+        "src": "/projects/unireal/actor.png",
+        "caption": "Implémentation de la classe Actor"
+      },
+      {
+        "type": "image",
+        "src": "/projects/unireal/input-manager.png",
+        "caption": "Structures de l'InputManager"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "dynamic-spline-mesh",
+    "title": "DynamicSplineMesh",
+    "tagline": "Outil de level design à base de courbes de Bézier",
+    "summary": "Outil Unreal Engine développé pour la préproduction d'Aohri's Uprising : les graphistes agencent leurs meshes le long d'une spline, avec prévisualisation en temps réel.",
+    "domain": "game",
+    "category": "tool",
+    "context": "Studio",
+    "client": "Aohri's Uprising",
+    "year": 2023,
+    "duration": "Préproduction",
+    "team": "Équipe de production",
+    "role": "Tools programmer",
+    "status": "Terminé",
+    "featured": true,
+    "order": 4,
+    "technologies": [
+      "C++",
+      "Unreal Engine",
+      "Splines",
+      "Outils éditeur"
+    ],
+    "cover": "/projects/dynamic-spline-mesh/aspect.png",
+    "highlights": [
+      "Génération de maillage 3D le long d'une courbe de Bézier",
+      "Placement, rotation (régulière, irrégulière, par groupe) et composition de meshes",
+      "Accroche au sol (snap on ground) et création de ponts",
+      "Visualisation en temps réel pour itérer rapidement"
+    ],
+    "links": {
+      "github": "",
+      "demo": "",
+      "docs": "https://docs.google.com/document/d/1PVMAUC3mPgJ2ipv6nVWWGZnsrAEYhEIz5Z5z_SookFM/edit"
+    },
+    "content": [
+      {
+        "heading": "Contexte",
+        "paragraphs": [
+          "Dans le cadre de la préproduction du jeu Aohri's Uprising, le lead graphiste m'a confié le développement d'un outil de level design pour faciliter l'agencement des meshes créés par l'équipe dans les différents niveaux.",
+          "La courbe de maillage dynamique en est l'élément central : elle construit un maillage 3D à partir d'une courbe de Bézier, dont les points de contrôle offrent une grande souplesse pour créer des formes complexes."
+        ]
+      },
+      {
+        "heading": "Objectifs",
+        "list": [
+          "Faciliter la création et la modification des niveaux",
+          "Permettre une visualisation en temps réel de l'agencement des meshes",
+          "Gagner du temps dans l'itération et l'ajustement des niveaux"
+        ]
+      },
+      {
+        "heading": "Bénéfices pour l'équipe",
+        "list": [
+          "Amélioration de la productivité des graphistes",
+          "Réduction des erreurs et des incohérences dans les niveaux",
+          "Meilleure collaboration entre graphistes et level designer"
+        ]
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/dynamic-spline-mesh/aspect.png",
+        "caption": "Barrière générée le long d'une spline"
+      },
+      {
+        "type": "image",
+        "src": "/projects/dynamic-spline-mesh/snaponground.png",
+        "caption": "Accroche automatique au sol"
+      },
+      {
+        "type": "image",
+        "src": "/projects/dynamic-spline-mesh/composition.png",
+        "caption": "Composition de plusieurs meshes"
+      },
+      {
+        "type": "image",
+        "src": "/projects/dynamic-spline-mesh/rotationgroup.png",
+        "caption": "Rotation par groupe"
+      },
+      {
+        "type": "image",
+        "src": "/projects/dynamic-spline-mesh/bridge.png",
+        "caption": "Mode pont"
+      },
+      {
+        "type": "image",
+        "src": "/projects/dynamic-spline-mesh/all.png",
+        "caption": "Vue d'ensemble des paramètres"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "spykergear",
+    "title": "SpykerGear",
+    "tagline": "Jeu d'infiltration 3D et IA à base de FSM",
+    "summary": "Jeu d'infiltration réalisé en un mois : le joueur contrôle un drone et une araignée robot pour pirater un réseau surveillé par des gardes et des caméras.",
+    "domain": "game",
+    "category": "game",
+    "context": "Formation",
+    "year": 2023,
+    "duration": "1 mois",
+    "team": "Graphistes, rigger, animateur",
+    "role": "Gameplay & AI programmer",
+    "status": "Terminé",
+    "featured": false,
+    "order": 4,
+    "technologies": [
+      "C++",
+      "Unreal Engine",
+      "IA",
+      "FSM",
+      "Pathfinding"
+    ],
+    "cover": "/projects/spykergear/cover.jpg",
+    "highlights": [
+      "Architecture de FSM personnalisée (State, Transition, Blackboard)",
+      "Gardes et caméras de surveillance piratables aux comportements propres",
+      "Pathfinding personnalisé et steering avoidance",
+      "3C du drone et de l'araignée robot"
+    ],
+    "links": {
+      "github": "",
+      "demo": "",
+      "video": ""
+    },
+    "content": [
+      {
+        "heading": "Le jeu",
+        "paragraphs": [
+          "SpykerGear a été réalisé en un mois en étroite collaboration avec une petite équipe de graphistes, rigger et animateur. Le joueur prend possession d'un drone et d'une araignée robot pour pirater le réseau informatique d'un lieu surveillé par des gardes et des caméras piratables."
+        ]
+      },
+      {
+        "heading": "Intelligence artificielle",
+        "paragraphs": [
+          "J'ai développé les 3C et surtout des IA aux comportements propres. L'implémentation d'une FSM personnalisée pour contrôler gardes et caméras, ainsi qu'un pathfinding sur mesure, ont été les défis majeurs du projet."
+        ],
+        "list": [
+          "Réactions réalistes aux actions du joueur",
+          "Système de surveillance interactif",
+          "Prise de décision intelligente"
+        ]
+      }
+    ],
+    "gallery": [
+      {
+        "type": "video",
+        "src": "/projects/spykergear/steering-avoidance.mp4",
+        "caption": "Steering avoidance des gardes"
+      },
+      {
+        "type": "video",
+        "src": "/projects/spykergear/camera-chase.mp4",
+        "caption": "Poursuite déclenchée par une caméra"
+      },
+      {
+        "type": "image",
+        "src": "/projects/spykergear/fsm.png",
+        "caption": "Cœur de la FSM"
+      },
+      {
+        "type": "image",
+        "src": "/projects/spykergear/state.png",
+        "caption": "Classe State"
+      },
+      {
+        "type": "image",
+        "src": "/projects/spykergear/transition.png",
+        "caption": "Classe Transition"
+      },
+      {
+        "type": "image",
+        "src": "/projects/spykergear/blackboard.png",
+        "caption": "Blackboard partagé"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "frustum-culling",
+    "title": "Frustum Culling",
+    "tagline": "Octree et frustum culling pour optimiser le rendu sous Unreal Engine",
+    "summary": "Système d'octree couplé à un frustum culling pour n'afficher que les objets visibles par la caméra, développé pour Aohri's Uprising.",
+    "domain": "game",
+    "category": "tool",
+    "context": "Studio",
+    "client": "Aohri's Uprising",
+    "year": 2023,
+    "duration": "Préproduction",
+    "team": "Équipe de production",
+    "role": "Tools programmer",
+    "status": "Terminé",
+    "featured": true,
+    "order": 5,
+    "technologies": [
+      "C++",
+      "Unreal Engine",
+      "Optimisation",
+      "Octree"
+    ],
+    "cover": "/projects/frustum-culling/octree.jpg",
+    "highlights": [
+      "Octree : subdivision en 8 boîtes enfants dès qu'une boîte est saturée",
+      "Frustum : test de visibilité des feuilles de l'octree",
+      "Réduction nette du nombre d'objets à traiter par le CPU et le GPU"
+    ],
+    "links": {
+      "github": "",
+      "docs": "https://docs.google.com/document/d/1PVMAUC3mPgJ2ipv6nVWWGZnsrAEYhEIz5Z5z_SookFM/edit"
+    },
+    "content": [
+      {
+        "heading": "Pourquoi ?",
+        "paragraphs": [
+          "Dans un moteur de jeu, il est primordial d'optimiser les rendus pour limiter les pertes d'images. Les algorithmes de détermination des surfaces cachées sont parmi les plus efficaces : backface, frustum, occlusion et contribution culling."
+        ]
+      },
+      {
+        "heading": "Fonctionnement",
+        "list": [
+          "Octree : une boîte virtuelle contient tous les objets du monde ; au-delà d'un seuil, elle se divise en 8 boîtes enfants, jusqu'à ce qu'aucune ne soit saturée",
+          "Frustum : un composant vérifie si chaque octree feuille est dans le champ de vision de la caméra, et rend visibles les objets qu'il contient"
+        ]
+      },
+      {
+        "heading": "Conclusion",
+        "paragraphs": [
+          "Ce système fait partie des outils de performance produits pour Aohri's Uprising, aux côtés d'un « pooling trigger ». Ils ont permis de surveiller, analyser et optimiser les performances du projet."
+        ]
+      }
+    ],
+    "gallery": [
+      {
+        "type": "video",
+        "src": "/projects/frustum-culling/octree.mp4",
+        "caption": "Subdivision de l'octree dans l'éditeur"
+      },
+      {
+        "type": "video",
+        "src": "/projects/frustum-culling/checker.mp4",
+        "caption": "Frustum culling en jeu : seuls les objets visibles sont affichés"
+      },
+      {
+        "type": "image",
+        "src": "/projects/frustum-culling/octree.jpg",
+        "caption": "Réglages de l'octree dans l'éditeur (1 000 acteurs)"
+      },
+      {
+        "type": "image",
+        "src": "/projects/frustum-culling/code-visibility.png",
+        "caption": "UFrustumChecker::CheckVisibility — test de visibilité des acteurs"
+      },
+      {
+        "type": "image",
+        "src": "/projects/frustum-culling/code-octree-spawn.png",
+        "caption": "AOctree::SpawnChildren — subdivision en 8 boîtes enfants"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "aaron-crusade",
+    "title": "AAron Crusade",
+    "tagline": "Vertical slice d'un jeu d'action 2D pour un studio",
+    "summary": "Mission à distance pour un studio toulousain : intégration complète d'un vertical slice Unity 2D en deux mois, en binôme avec le graphiste et le game designer.",
+    "domain": "game",
+    "category": "game",
+    "context": "Prestation",
+    "client": "Studio indépendant (Toulouse)",
+    "year": 2023,
+    "duration": "2 mois",
+    "team": "Graphiste, game designer",
+    "role": "Seul développeur",
+    "status": "Terminé",
+    "featured": false,
+    "order": 6,
+    "technologies": [
+      "C#",
+      "Unity",
+      "Cinemachine",
+      "Input System"
+    ],
+    "cover": null,
+    "highlights": [
+      "3C fluides et réactifs pour le personnage principal",
+      "Ennemis aux comportements uniques et boss aux mécaniques spéciales",
+      "Effets sonores et visuels pour l'immersion",
+      "Cinemachine, nouvel Input System, StateMachineBehaviour"
+    ],
+    "links": {
+      "github": "",
+      "demo": ""
+    },
+    "content": [
+      {
+        "heading": "Le contexte",
+        "paragraphs": [
+          "Durant ma dernière année de Gameplay Programming, j'ai travaillé à distance avec un studio basé à Toulouse sur un projet 2D sous Unity. Pendant deux mois, j'ai intégré seul l'ensemble du jeu, en collaboration directe avec le graphiste et le game designer."
+        ]
+      },
+      {
+        "heading": "Ce que j'ai réalisé",
+        "list": [
+          "Responsabilité des 3C (character, camera, controls)",
+          "Intégration de plusieurs ennemis et d'un boss",
+          "Effets sonores et visuels",
+          "Exploitation de Cinemachine, du nouvel Input System et des StateMachineBehaviour"
+        ]
+      },
+      {
+        "heading": "Résultat",
+        "paragraphs": [
+          "Un vertical slice jouable qui a servi d'outil convaincant pour démontrer le potentiel du jeu à toutes les parties prenantes."
+        ]
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/aaron-crusade/scripts.png",
+        "caption": "Organisation des scripts du projet"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "slug": "dynamic-fractal",
+    "title": "Dynamic Fractal",
+    "tagline": "Zoom infini sur l'ensemble de Mandelbrot",
+    "summary": "Rendu temps réel de l'ensemble de Mandelbrot avec zoom automatique fluide vers un point d'intérêt et palette de couleurs interpolée.",
+    "domain": "game",
+    "category": "engine",
+    "context": "Personnel",
+    "year": 2025,
+    "duration": "Side project",
+    "team": "Solo",
+    "role": "Développeur C++",
+    "status": "Terminé",
+    "featured": false,
+    "order": 7,
+    "technologies": [
+      "C++",
+      "SFML",
+      "Mathématiques"
+    ],
+    "cover": "/projects/dynamic-fractal/cover.jpg",
+    "highlights": [
+      "Calcul de l'ensemble de Mandelbrot en double précision",
+      "Zoom automatique et lissé vers une coordonnée cible",
+      "Palette de couleurs à interpolation linéaire",
+      "Séparation ViewController / ViewRenderer, compteur de FPS"
+    ],
+    "links": {
+      "github": "https://github.com/ThreatsHunterPro/DynamicFractal"
+    },
+    "content": [
+      {
+        "heading": "Le projet",
+        "paragraphs": [
+          "Petit programme SFML qui explore l'ensemble de Mandelbrot en zoomant en continu vers un point remarquable de la frontière de la fractale.",
+          "Le code sépare clairement la logique de vue (centre, niveau de zoom) du rendu, et la coloration s'appuie sur un dégradé interpolé canal par canal."
+        ]
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/dynamic-fractal/ensemble.jpg",
+        "caption": "L'ensemble de Mandelbrot complet"
+      },
+      {
+        "type": "image",
+        "src": "/projects/dynamic-fractal/cover.jpg",
+        "caption": "Zoom vers le point cible, avec la palette du projet"
+      },
+      {
+        "type": "image",
+        "src": "/projects/dynamic-fractal/zoom.jpg",
+        "caption": "Zoom plus profond : un mini-Mandelbrot au centre"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "slug": "hollow-knight-clone",
+    "title": "Hollow Knight (recréation)",
+    "tagline": "À compléter",
+    "summary": "À compléter : brouillon non publié. Passez \"published\" à true une fois la fiche remplie.",
+    "domain": "game",
+    "category": "game",
+    "context": "Personnel",
+    "year": 2024,
+    "status": "Prototype",
+    "featured": false,
+    "published": false,
+    "technologies": [
+      "C++",
+      "CMake"
+    ],
+    "cover": null,
+    "highlights": [],
+    "links": {},
+    "content": [],
+    "gallery": []
+  },
+  {
+    "id": 10,
+    "slug": "fluence",
+    "title": "Fluence",
+    "tagline": "À compléter",
+    "summary": "À compléter : brouillon non publié. Passez \"published\" à true une fois la fiche remplie.",
+    "domain": "game",
+    "category": "engine",
+    "context": "Personnel",
+    "year": 2025,
+    "status": "En cours",
+    "featured": false,
+    "published": false,
+    "technologies": [
+      "C++",
+      "CMake",
+      "vcpkg"
+    ],
+    "cover": null,
+    "highlights": [],
+    "links": {},
+    "content": [],
+    "gallery": []
+  },
+  {
+    "id": 11,
+    "slug": "drive-beyond-horizons",
+    "title": "Drive Beyond Horizons",
+    "tagline": "Développeur Unreal Engine chez Tacty Studio",
+    "summary": "Développeur Unreal Engine en CDI chez Tacty Studio depuis juin 2026, je participe au développement de Drive Beyond Horizons.",
+    "domain": "game",
+    "category": "game",
+    "context": "Studio",
+    "client": "Tacty Studio",
+    "year": 2026,
+    "duration": "Depuis juin 2026",
+    "team": "Équipe du studio",
+    "role": "Développeur Unreal Engine (C++)",
+    "status": "En cours",
+    "featured": true,
+    "order": 1,
+    "technologies": [
+      "C++",
+      "Unreal Engine 5"
+    ],
+    "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2625420/capsule_616x353.jpg",
+    "highlights": [
+      "Développeur Unreal Engine (C++) au sein de l'équipe de Tacty Studio",
+      "Jeu multijoueur en Early Access sur Steam, en cours de reconstruction complète (« DBH Next »)"
+    ],
+    "links": {
+      "steam": "https://store.steampowered.com/app/2625420/",
+      "article": "https://store.steampowered.com/news/app/2625420/view/716786751176180849"
+    },
+    "content": [
+      {
+        "heading": "Le jeu",
+        "paragraphs": [
+          "Drive Beyond Horizons est un jeu de conduite multijoueur en monde ouvert, disponible en Early Access sur Steam. Le studio a annoncé publiquement sa reconstruction complète sous Unreal Engine 5, détaillée dans la série « Next Kilometer »."
+        ]
+      },
+      {
+        "heading": "Mon poste",
+        "paragraphs": [
+          "Depuis juin 2026, je travaille en CDI chez Tacty Studio en tant que développeur Unreal Engine sur ce projet."
+        ]
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2625420/ce8a54fff9cdaf97f1f66990d6965f130459f1cb/ss_ce8a54fff9cdaf97f1f66990d6965f130459f1cb.1920x1080.jpg",
+        "caption": "Capture officielle — Steam"
+      },
+      {
+        "type": "image",
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2625420/aa6ddb6795c512719455e68e4df411da73cfb1a5/ss_aa6ddb6795c512719455e68e4df411da73cfb1a5.1920x1080.jpg",
+        "caption": "Capture officielle — Steam"
+      },
+      {
+        "type": "image",
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2625420/15f265e08b917fe2744322a0dc26af54c9c6f517/ss_15f265e08b917fe2744322a0dc26af54c9c6f517.1920x1080.jpg",
+        "caption": "Capture officielle — Steam"
+      },
+      {
+        "type": "image",
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2625420/6338dcaf3b9c41a7e8912e1e5ea578b83c35e1bd/ss_6338dcaf3b9c41a7e8912e1e5ea578b83c35e1bd.1920x1080.jpg",
+        "caption": "Capture officielle — Steam"
+      }
+    ],
+    "hero": 1
+  },
+  {
+    "id": 12,
+    "slug": "cursed-island",
+    "title": "Cursed Island : The First Light",
+    "tagline": "Jeu de survie-aventure narratif — Loyal Games",
+    "summary": "Un jeu de survie-aventure à la première personne sur une île mystérieuse. Je porte le projet au sein de Loyal Games et j'en assure la programmation et la direction technique.",
+    "domain": "game",
+    "category": "game",
+    "context": "Studio",
+    "client": "Loyal Games",
+    "year": 2026,
+    "duration": "En développement",
+    "team": "Équipe Loyal Games",
+    "role": "Porteur de projet & programmeur",
+    "status": "En cours",
+    "featured": true,
+    "order": 2,
+    "technologies": [
+      "Unreal Engine 5",
+      "C++",
+      "Perforce"
+    ],
+    "cover": "/projects/cursed-island/cover-logo.jpg",
+    "highlights": [
+      "Survie, exploration et narration dans un univers visuel fort",
+      "Porteur du projet : programmation, direction technique et pilotage de l'équipe",
+      "Développement sous Unreal Engine 5, versioning Perforce",
+      "Jeu visé sur PC et consoles"
+    ],
+    "links": {},
+    "content": [
+      {
+        "heading": "Le jeu",
+        "paragraphs": [
+          "Cursed Island : The First Light est un jeu de survie-aventure narratif à la première personne. Le joueur y explore une île mystérieuse et doit apprendre à y survivre.",
+          "Le projet est actuellement en développement : plus de détails seront dévoilés prochainement."
+        ]
+      },
+      {
+        "heading": "Mon rôle",
+        "paragraphs": [
+          "Porteur du projet au sein de Loyal Games, j'assure la programmation et la direction technique, et je pilote une équipe pluridisciplinaire (game design, narration, art, tech art)."
+        ]
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/cursed-island/cover-logo.jpg",
+        "caption": "Cursed Island : The First Light"
+      },
+      {
+        "type": "image",
+        "src": "/projects/cursed-island/campement-nuit.jpg",
+        "caption": "Le campement à la tombée de la nuit"
+      },
+      {
+        "type": "image",
+        "src": "/projects/cursed-island/creature.jpg",
+        "caption": "Concept art d'une créature de l'île — équipe Loyal Games"
+      },
+      {
+        "type": "image",
+        "src": "/projects/cursed-island/personnage.jpg",
+        "caption": "Recherche de personnage — équipe Loyal Games"
+      }
+    ],
+    "hero": 2
+  },
+  {
+    "id": 16,
+    "slug": "custom-world-partition",
+    "title": "Custom World Partition",
+    "tagline": "Streaming de monde ouvert fait maison",
+    "summary": "Réimplémentation d'un système de World Partition sous Unreal Engine : octree, sources de streaming et chargement dynamique des zones autour des joueurs.",
+    "domain": "game",
+    "category": "tool",
+    "context": "Personnel",
+    "year": 2025,
+    "duration": "R&D",
+    "team": "Solo",
+    "role": "Programmeur moteur",
+    "status": "Prototype",
+    "featured": false,
+    "order": 11,
+    "technologies": [
+      "C++",
+      "Unreal Engine",
+      "Octree",
+      "Optimisation",
+      "Multijoueur"
+    ],
+    "cover": null,
+    "highlights": [
+      "Octree de partitionnement du monde",
+      "Composants de streaming et de vision par joueur",
+      "Stream manager compatible multijoueur"
+    ],
+    "links": {},
+    "content": [
+      {
+        "heading": "Le projet",
+        "paragraphs": [
+          "Projet de R&D visant à comprendre et reproduire le World Partition d'Unreal Engine : le monde est découpé via un octree et seules les cellules proches des sources de streaming (joueurs) sont chargées."
+        ]
+      }
+    ],
+    "gallery": []
+  },
+  {
+    "id": 17,
+    "slug": "worknest",
+    "title": "WorkNest",
+    "tagline": "Prototype de réseau professionnel et d'offres d'emploi",
+    "summary": "Plateforme web full-stack permettant de consulter et publier des offres d'emploi, avec authentification JWT et base Supabase.",
+    "domain": "web",
+    "category": "web",
+    "context": "Formation",
+    "year": 2025,
+    "duration": "Projet personnel",
+    "team": "Solo",
+    "role": "Développeur full-stack",
+    "status": "Prototype",
+    "featured": true,
+    "order": 2,
+    "technologies": [
+      "React",
+      "React Router",
+      "Node.js",
+      "Express",
+      "JWT",
+      "Supabase",
+      "PostgreSQL"
+    ],
+    "cover": "/projects/worknest/accueil.jpg",
+    "highlights": [
+      "Authentification sécurisée avec JWT",
+      "Consultation des offres depuis Supabase",
+      "Publication d'offres pour les utilisateurs connectés",
+      "Routes API protégées et validation des tokens"
+    ],
+    "links": {
+      "github": "https://github.com/ThreatsHunterPro/WorkNest"
+    },
+    "content": [
+      {
+        "heading": "Le projet",
+        "paragraphs": [
+          "WorkNest est un prototype de plateforme simulant un réseau professionnel, réalisé dans le cadre de ma montée en compétences full-stack."
+        ]
+      },
+      {
+        "heading": "Difficultés rencontrées",
+        "paragraphs": [
+          "Mettre en place une communication efficace entre le front et le back, notamment pour la validation et le stockage sécurisé des tokens. Cela m'a permis de consolider la structure REST et la sécurisation d'une API."
+        ]
+      },
+      {
+        "heading": "Prochaines étapes",
+        "list": [
+          "Système de rôles (admin, candidat, recruteur)",
+          "Refonte responsive",
+          "Filtres de recherche",
+          "Déploiement complet"
+        ]
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/worknest/accueil.jpg",
+        "caption": "Accueil : recherche par poste et par ville"
+      },
+      {
+        "type": "image",
+        "src": "/projects/worknest/offres.jpg",
+        "caption": "Liste des offres d'emploi"
+      },
+      {
+        "type": "image",
+        "src": "/projects/worknest/entreprises.jpg",
+        "caption": "Section entreprises"
+      },
+      {
+        "type": "image",
+        "src": "/projects/worknest/mobile.jpg",
+        "caption": "Version mobile responsive"
+      },
+      {
+        "type": "image",
+        "src": "/projects/worknest/connexion.jpg",
+        "caption": "Connexion / inscription (JWT)"
+      },
+      {
+        "type": "image",
+        "src": "/projects/worknest/contact.jpg",
+        "caption": "Formulaire de contact"
+      }
+    ],
+    "hero": 3
+  },
+  {
+    "id": 18,
+    "slug": "portfolio",
+    "title": "Ce portfolio",
+    "tagline": "Site vitrine full-stack, contenu piloté par API",
+    "summary": "Le site que vous consultez : front React animé, API Express qui sert les projets et reçoit les demandes de contact, déploiement conteneurisé.",
+    "domain": "web",
+    "category": "web",
+    "context": "Personnel",
+    "year": 2026,
+    "duration": "Projet personnel",
+    "team": "Solo",
+    "role": "Design & développement",
+    "status": "En cours",
+    "featured": false,
+    "order": 3,
+    "technologies": [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Node.js",
+      "Express",
+      "Docker",
+      "Vitest"
+    ],
+    "cover": "/projects/portfolio/accueil.jpg",
+    "highlights": [
+      "Filtres partagés dans l'URL et animations de mise en page",
+      "Contenu éditable dans des fichiers JSON, sans redéploiement du front",
+      "Formulaire de contact validé côté client et serveur, anti-spam",
+      "API testée avec Vitest et Supertest"
+    ],
+    "links": {},
+    "content": [
+      {
+        "heading": "Le projet",
+        "paragraphs": [
+          "Monorepo reprenant l'architecture d'EcoRide : une API Express qui expose les projets et le profil, et un front React qui les met en scène."
+        ]
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/portfolio/accueil.jpg",
+        "caption": "Page d'accueil"
+      },
+      {
+        "type": "image",
+        "src": "/projects/portfolio/projets.jpg",
+        "caption": "Liste des projets filtrable"
+      },
+      {
+        "type": "image",
+        "src": "/projects/portfolio/fiche-projet.jpg",
+        "caption": "Fiche d'un projet"
+      }
+    ]
+  }
+]

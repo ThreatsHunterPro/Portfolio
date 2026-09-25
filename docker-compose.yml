@@ -1,0 +1,22 @@
+services:
+  backend:
+    build:
+      context: ./BackEnd
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    env_file:
+      - ./BackEnd/.env
+    volumes:
+      - ./BackEnd/data:/app/data
+
+  frontend:
+    build:
+      context: ./FrontEnd
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: http://localhost:3001
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend

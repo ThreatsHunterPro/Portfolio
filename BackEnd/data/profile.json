@@ -1,0 +1,181 @@
+{
+  "firstName": "Thomas",
+  "lastName": "COLIN",
+  "title": "Développeur freelance — Jeu vidéo & Web",
+  "tagline": "Je conçois des systèmes gameplay sous Unreal et Unity, et des applications web full-stack. Deux métiers, une même exigence technique.",
+  "location": "France",
+  "availability": "Disponible pour des missions",
+  "email": "thomas.cln.pro@gmail.com",
+  "avatar": null,
+  "cv": null,
+  "about": [
+    "Diplômé en Gameplay Programming, j'ai travaillé avec de nombreux langages, bibliothèques graphiques, outils de versioning et surtout avec Unity et Unreal Engine. J'enseigne aujourd'hui ces deux moteurs à Objectif3D.",
+    "Ma curiosité m'a poussé à prototyper mon propre moteur (Unireal), puis à développer des outils de production et des systèmes gameplay pour des studios. Je porte également le projet Cursed Island : The First Light au sein de Loyal Games.",
+    "En parallèle, j'ai élargi ce socle au développement web full-stack : API REST sécurisées, bases SQL / NoSQL, React et déploiement conteneurisé. Je propose aujourd'hui mes services en prestation sur ces deux domaines."
+  ],
+  "socials": {
+    "github": "https://github.com/ThreatsHunterPro",
+    "linkedin": "",
+    "itchio": "",
+    "youtube": ""
+  },
+  "services": {
+    "game": {
+      "title": "Développement jeu vidéo",
+      "pitch": "Un renfort technique pour votre studio : systèmes gameplay, outils et optimisation sous Unreal Engine et Unity.",
+      "offers": [
+        {
+          "title": "Systèmes gameplay",
+          "description": "3C, véhicules, combat, IA (FSM, perception), interactions — en C++ ou C#, pensés pour être réglés par les designers."
+        },
+        {
+          "title": "Multijoueur",
+          "description": "Réplication, prédiction locale, sessions en ligne : des systèmes qui tiennent la route en réseau."
+        },
+        {
+          "title": "Outils & pipeline",
+          "description": "Outils éditeur, level design procédural, automatisation : faire gagner du temps à toute l'équipe."
+        },
+        {
+          "title": "Optimisation",
+          "description": "Profiling, culling, streaming, pooling : garder un framerate stable jusqu'au packaging."
+        }
+      ],
+      "stack": [
+        "Unreal Engine 5",
+        "Unity",
+        "C++",
+        "C#",
+        "Blueprints",
+        "Perforce",
+        "Git"
+      ]
+    },
+    "web": {
+      "title": "Développement web",
+      "pitch": "Des sites et applications web sur mesure, du back-end sécurisé à l'interface soignée.",
+      "offers": [
+        {
+          "title": "Applications full-stack",
+          "description": "React côté client, API REST Node.js / Express côté serveur, authentification et gestion des rôles."
+        },
+        {
+          "title": "Sites vitrines",
+          "description": "Des pages rapides, responsive et animées, faciles à mettre à jour."
+        },
+        {
+          "title": "API & bases de données",
+          "description": "Conception de modèles de données, PostgreSQL / Supabase, MongoDB, sécurisation des routes."
+        },
+        {
+          "title": "Déploiement",
+          "description": "Conteneurisation Docker, mise en ligne sur Vercel / Render, variables d'environnement propres."
+        }
+      ],
+      "stack": [
+        "React",
+        "Node.js",
+        "Express",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "MongoDB",
+        "Docker"
+      ]
+    }
+  },
+  "skills": [
+    {
+      "group": "Langages",
+      "items": [
+        "C++",
+        "C#",
+        "JavaScript",
+        "SQL",
+        "HTML / CSS"
+      ]
+    },
+    {
+      "group": "Moteurs & graphisme",
+      "items": [
+        "Unreal Engine 5",
+        "Unity",
+        "OpenGL",
+        "SFML",
+        "ImGui",
+        "GLFW"
+      ]
+    },
+    {
+      "group": "Web",
+      "items": [
+        "React",
+        "Node.js",
+        "Express",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "MongoDB"
+      ]
+    },
+    {
+      "group": "Outils",
+      "items": [
+        "Git",
+        "Perforce",
+        "Docker",
+        "CMake",
+        "Vitest",
+        "Rider / Visual Studio"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "period": "Depuis juin 2026",
+      "title": "Développeur Unreal Engine — CDI",
+      "place": "Tacty Studio",
+      "description": "Développeur Unreal Engine (C++) sur Drive Beyond Horizons."
+    },
+    {
+      "period": "2026 — aujourd'hui",
+      "title": "Porteur de projet — Cursed Island",
+      "place": "Loyal Games",
+      "description": "Programmation, direction technique et pilotage de l'équipe sur un jeu de survie-aventure narratif."
+    },
+    {
+      "period": "2025 — 2026",
+      "title": "Développement web full-stack",
+      "place": "Formation Studi",
+      "description": "WorkNest puis EcoRide : applications React / Express / PostgreSQL / MongoDB, déployées sur Vercel et Render."
+    },
+    {
+      "period": "Depuis 2023",
+      "title": "Formateur Unity & Unreal Engine",
+      "place": "Objectif3D",
+      "description": "Enseignement de la programmation gameplay et encadrement de projets d'équipe : moteur 2D SFML, recréations de classiques (The Binding of Isaac, Crypt of the NecroDancer, Pokémon, casse-briques...)."
+    },
+    {
+      "period": "2023",
+      "title": "Mission Unity 2D — AAron Crusade",
+      "place": "Studio indépendant, Toulouse (à distance)",
+      "description": "Intégration complète d'un vertical slice en deux mois : 3C, ennemis, boss, effets sonores et visuels."
+    },
+    {
+      "period": "2020 — 2023",
+      "title": "Gameplay Programming",
+      "place": "Objectif3D — 3 ans",
+      "description": "C++, C#, Unreal Engine, Unity, IA, programmation graphique. Outils pour Aohri's Uprising, projet de fin d'études : moteur Unireal."
+    }
+  ],
+  "teaching": {
+    "title": "Et bien plus en tant que formateur",
+    "intro": "Formateur Unity & Unreal Engine à Objectif3D, j'ai conçu et encadré des dizaines de projets avec mes élèves. Nous avons notamment recréé un moteur 2D en C++ avec SFML, sur lequel nous avons produit des jeux inspirés de grands classiques.",
+    "projects": [
+      "The Binding of Isaac",
+      "Crypt of the NecroDancer",
+      "Pokémon",
+      "Casse-briques",
+      "Moteur 2D SFML"
+    ],
+    "note": "Ces projets appartiennent aussi à l'école et aux élèves : je ne les expose donc pas ici, mais je serai ravi d'en parler de vive voix."
+  }
+}
