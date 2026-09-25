@@ -13,7 +13,7 @@ import ErrorMessage from "../../Shared/ErrorMessage";
 import Button from "../../Shared/Button";
 import Reveal from "../../Shared/Reveal";
 import Lightbox from "../../Shared/Lightbox";
-import ProjectCover from "../../Shared/ProjectCover";
+import MediaCarousel from "../../Shared/MediaCarousel";
 import CategoryBadge from "../../Shared/Badges/CategoryBadge";
 import StatusBadge from "../../Shared/Badges/StatusBadge";
 import TechBadge from "../../Shared/Badges/TechBadge";
@@ -70,6 +70,16 @@ export default function ProjectDetailPage() {
   const links = LINKS.filter(({ key }) => project.links?.[key]);
   const gallery = project.gallery || [];
 
+  // Diapositives du carrousel : teaser, couverture (si absente de la galerie), puis galerie
+  const slides = [
+    ...(teaserId ? [{ type: "youtube", youtubeId: teaserId, caption: "Teaser" }] : []),
+    ...(project.cover && !gallery.some((g) => g.src === project.cover)
+      ? [{ type: "image", src: project.cover, caption: project.title }]
+      : []),
+    ...gallery.map((item, i) => ({ ...item, galleryIndex: i })),
+  ];
+  if (!slides.length) slides.push({ type: "generated" });
+
   return (
     <PageLayout title={project.title}>
       {/* --- En-tête --- */}
@@ -100,26 +110,14 @@ export default function ProjectDetailPage() {
         </div>
       </section>
 
-      {/* --- Teaser vidéo (YouTube) ou couverture --- */}
+      {/* --- Visuel principal : teaser, couverture et galerie en carrousel --- */}
       <div className="container-page -mt-px pt-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15, duration: 0.6 }}
-          className={`${teaserId ? "aspect-video" : "aspect-[16/9] sm:aspect-[21/9]"} overflow-hidden rounded-3xl border border-line bg-night-700 shadow-card`}
         >
-          {teaserId ? (
-            <iframe
-              src={`https://www.youtube-nocookie.com/embed/${teaserId}?rel=0`}
-              title={`Teaser — ${project.title}`}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
-              className="h-full w-full"
-            />
-          ) : (
-            <ProjectCover project={project} large />
-          )}
+          <MediaCarousel project={project} slides={slides} onExpand={setLightboxIndex} />
         </motion.div>
       </div>
 
