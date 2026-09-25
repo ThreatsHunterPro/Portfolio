@@ -32,6 +32,9 @@ const LINKS = [
   { key: "docs", label: "Documentation", icon: FiFileText, variant: "outlined" },
 ];
 
+/** Extrait l'identifiant d'une URL YouTube (youtu.be/ID, watch?v=ID, embed/ID) */
+const getYouTubeId = (url) => url?.match(/(?:youtu\.be\/|v=|embed\/)([\w-]{11})/)?.[1] || null;
+
 function InfoRow({ icon: Icon, label, value }) {
   if (!value) return null;
   return (
@@ -63,6 +66,7 @@ export default function ProjectDetailPage() {
   }
 
   const domain = getDomain(project.domain);
+  const teaserId = getYouTubeId(project.teaser);
   const links = LINKS.filter(({ key }) => project.links?.[key]);
   const gallery = project.gallery || [];
 
@@ -96,15 +100,26 @@ export default function ProjectDetailPage() {
         </div>
       </section>
 
-      {/* --- Couverture --- */}
+      {/* --- Teaser vidéo (YouTube) ou couverture --- */}
       <div className="container-page -mt-px pt-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15, duration: 0.6 }}
-          className="aspect-[16/9] sm:aspect-[21/9] overflow-hidden rounded-3xl border border-line bg-night-700 shadow-card"
+          className={`${teaserId ? "aspect-video" : "aspect-[16/9] sm:aspect-[21/9]"} overflow-hidden rounded-3xl border border-line bg-night-700 shadow-card`}
         >
-          <ProjectCover project={project} large />
+          {teaserId ? (
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/${teaserId}?rel=0`}
+              title={`Teaser — ${project.title}`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+              className="h-full w-full"
+            />
+          ) : (
+            <ProjectCover project={project} large />
+          )}
         </motion.div>
       </div>
 

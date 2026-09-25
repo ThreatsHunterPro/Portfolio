@@ -288,7 +288,7 @@
     "slug": "spykergear",
     "title": "SpykerGear",
     "tagline": "Jeu d'infiltration 3D et IA à base de FSM",
-    "summary": "Jeu d'infiltration réalisé en un mois : le joueur contrôle un drone et une araignée robot pour pirater un réseau surveillé par des gardes et des caméras.",
+    "summary": "Jeu d'infiltration réalisé en un mois : le joueur prend le contrôle d'un drone, d'une araignée robot ou de caméras de surveillance piratées pour dérober des données dans un bâtiment gardé.",
     "domain": "game",
     "category": "game",
     "context": "Formation",
@@ -304,14 +304,16 @@
       "Unreal Engine",
       "IA",
       "FSM",
-      "Pathfinding"
+      "A* / Pathfinding",
+      "3C"
     ],
     "cover": "/projects/spykergear/cover.jpg",
     "highlights": [
-      "Architecture de FSM personnalisée (State, Transition, Blackboard)",
-      "Gardes et caméras de surveillance piratables aux comportements propres",
-      "Pathfinding personnalisé et steering avoidance",
-      "3C du drone et de l'araignée robot"
+      "Multi-A* : l'araignée passe du sol aux murs et au plafond, pilotée à la main ou guidée depuis les caméras piratées",
+      "3C complets pour le drone de reconnaissance",
+      "Possession à la volée : drone, araignée ou caméra de surveillance piratée",
+      "IA des gardes et des caméras sur une FSM personnalisée (State, Transition, Blackboard)",
+      "Steering avoidance et poursuite déclenchée par les caméras"
     ],
     "links": {
       "github": "",
@@ -322,18 +324,30 @@
       {
         "heading": "Le jeu",
         "paragraphs": [
-          "SpykerGear a été réalisé en un mois en étroite collaboration avec une petite équipe de graphistes, rigger et animateur. Le joueur prend possession d'un drone et d'une araignée robot pour pirater le réseau informatique d'un lieu surveillé par des gardes et des caméras piratables."
+          "Depuis sa camionnette aménagée, un hacker envoie des robots de sa fabrication dérober des données sensibles. Chaque robot a ses propres capacités pour atteindre des endroits inaccessibles à un humain, dans un bâtiment surveillé par des gardes et des caméras.",
+          "Réalisé en un mois en étroite collaboration avec une petite équipe de graphistes, rigger et animateur."
+        ]
+      },
+      {
+        "heading": "Contrôler plusieurs entités",
+        "paragraphs": [
+          "Le joueur peut à tout moment prendre possession du drone, de l'araignée robot ou d'une caméra de surveillance qu'il a piratée."
+        ],
+        "list": [
+          "Drone de reconnaissance : 3C complets (déplacement, caméra, contrôles)",
+          "Araignée robot : pathfinding multi-A* qui lui permet de passer du sol aux murs, en contrôle direct ou en recevant ses destinations depuis une caméra piratée",
+          "Caméras piratées : point de vue sur le niveau et poste de commande pour guider les robots"
         ]
       },
       {
         "heading": "Intelligence artificielle",
         "paragraphs": [
-          "J'ai développé les 3C et surtout des IA aux comportements propres. L'implémentation d'une FSM personnalisée pour contrôler gardes et caméras, ainsi qu'un pathfinding sur mesure, ont été les défis majeurs du projet."
+          "Les gardes et les caméras reposent sur une architecture de FSM personnalisée, avec des états de ronde, d'alerte et de poursuite. Quand une caméra repère le joueur, l'alerte est propagée et les gardes rejoignent le point signalé par le chemin le plus court."
         ],
         "list": [
-          "Réactions réalistes aux actions du joueur",
+          "Réactions crédibles aux actions du joueur",
           "Système de surveillance interactif",
-          "Prise de décision intelligente"
+          "Steering avoidance entre les gardes"
         ]
       }
     ],
@@ -461,7 +475,7 @@
     "domain": "game",
     "category": "game",
     "context": "Prestation",
-    "client": "Studio indépendant (Toulouse)",
+    "client": "Nkx Studio",
     "year": 2023,
     "duration": "2 mois",
     "team": "Graphiste, game designer",
@@ -475,7 +489,7 @@
       "Cinemachine",
       "Input System"
     ],
-    "cover": null,
+    "cover": "/projects/aaron-crusade/cover.jpg",
     "highlights": [
       "3C fluides et réactifs pour le personnage principal",
       "Ennemis aux comportements uniques et boss aux mécaniques spéciales",
@@ -484,7 +498,8 @@
     ],
     "links": {
       "github": "",
-      "demo": ""
+      "demo": "",
+      "video": "https://youtu.be/MXdf0XvmkQo"
     },
     "content": [
       {
@@ -512,10 +527,21 @@
     "gallery": [
       {
         "type": "image",
+        "src": "/projects/aaron-crusade/cover.jpg",
+        "caption": "Visuel officiel d'AAron Crusade"
+      },
+      {
+        "type": "image",
+        "src": "/projects/aaron-crusade/gameplay.jpg",
+        "caption": "En jeu : exploration de la forêt et interface du joueur"
+      },
+      {
+        "type": "image",
         "src": "/projects/aaron-crusade/scripts.png",
         "caption": "Organisation des scripts du projet"
       }
-    ]
+    ],
+    "teaser": "https://youtu.be/MXdf0XvmkQo"
   },
   {
     "id": 7,

@@ -112,6 +112,7 @@ FrontEnd/
 * `featured: true` : le projet apparaît sur la page d'accueil
 * `published: false` : brouillon, masqué du site
 * `status` : `Terminé`, `En cours` ou `Prototype`
+* `teaser` : lien YouTube affiché en vidéo en haut de la fiche (à la place de la couverture)
 * `links` : `steam`, `demo`, `article`, `github`, `video`, `docs` — les liens vides sont automatiquement masqués
 
 Le profil (nom, bio, réseaux sociaux, **offres de prestation** par domaine dans `services`, compétences, parcours, CV) se modifie dans `BackEnd/data/profile.json`.
