@@ -132,7 +132,7 @@
     {
       "period": "Depuis juin 2026",
       "title": "Développeur Unreal Engine — CDI",
-      "place": "Tacty Studio",
+      "place": "Tacty Studio — Toulouse (à distance)",
       "description": "Développeur Unreal Engine (C++) sur Drive Beyond Horizons."
     },
     {
@@ -144,25 +144,25 @@
     {
       "period": "2025 — 2026",
       "title": "Développement web full-stack",
-      "place": "Formation Studi",
+      "place": "Formation Studi — En ligne",
       "description": "WorkNest puis EcoRide : applications React / Express / PostgreSQL / MongoDB, déployées sur Vercel et Render."
     },
     {
       "period": "Depuis 2023",
       "title": "Formateur Unity & Unreal Engine",
-      "place": "Objectif3D",
+      "place": "Objectif3D — Montpellier",
       "description": "Enseignement de la programmation gameplay et encadrement de projets d'équipe : moteur 2D SFML, recréations de classiques (The Binding of Isaac, Crypt of the NecroDancer, Pokémon, casse-briques...)."
     },
     {
       "period": "2023",
       "title": "Mission Unity 2D — AAron Crusade",
-      "place": "Studio indépendant, Toulouse (à distance)",
+      "place": "Nkx Studio — Toulouse (à distance)",
       "description": "Intégration complète d'un vertical slice en deux mois : 3C, ennemis, boss, effets sonores et visuels."
     },
     {
       "period": "2020 — 2023",
       "title": "Gameplay Programming",
-      "place": "Objectif3D — 3 ans",
+      "place": "Objectif3D — Montpellier",
       "description": "C++, C#, Unreal Engine, Unity, IA, programmation graphique. Outils pour Aohri's Uprising, projet de fin d'études : moteur Unireal."
     }
   ],

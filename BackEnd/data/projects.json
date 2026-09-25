@@ -894,7 +894,7 @@
     "team": "Solo",
     "role": "Design & développement",
     "status": "En cours",
-    "featured": false,
+    "featured": true,
     "order": 3,
     "technologies": [
       "React",
@@ -1139,14 +1139,14 @@
     "slug": "aohris-uprising",
     "title": "Aohri's Uprising",
     "tagline": "Jeu de tir à la troisième personne, sorti sur Steam",
-    "summary": "Notre jeu de fin d'études, sorti gratuitement sur Steam : la guerrière Aohri, armée de son arc, part affronter son dieu déchu. J'étais lead sur le projet et j'ai développé ses outils de production.",
+    "summary": "Notre jeu de fin d'études, sorti gratuitement sur Steam : la guerrière Aohri, armée de son arc, part affronter son dieu déchu. J'étais lead programmeur sur le projet et j'ai développé ses outils de production.",
     "domain": "game",
     "category": "game",
     "context": "Formation",
     "year": 2023,
     "duration": "Projet de fin d'études",
     "team": "Équipe d'étudiants Objectif3D",
-    "role": "Lead du projet",
+    "role": "Lead programmeur",
     "status": "Terminé",
     "featured": true,
     "technologies": [
@@ -1158,7 +1158,7 @@
     "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2200400/capsule_616x353.jpg",
     "highlights": [
       "Sorti gratuitement sur Steam le 26 juin 2023",
-      "Lead de l'équipe étudiante",
+      "Lead programmeur de l'équipe étudiante",
       "Outil de level design DynamicSplineMesh",
       "Octree, frustum culling et pooling trigger pour les performances"
     ],
@@ -1175,7 +1175,7 @@
       {
         "heading": "Mon rôle",
         "paragraphs": [
-          "J'étais lead sur ce projet de fin d'études. J'ai également développé les outils qui ont servi à toute l'équipe :"
+          "J'étais lead programmeur sur ce projet de fin d'études. J'ai également développé les outils qui ont servi à toute l'équipe :"
         ],
         "list": [
           "DynamicSplineMesh : outil de level design à base de splines pour les graphistes",
