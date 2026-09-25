@@ -221,7 +221,7 @@
       "Visualisation en temps réel pour itérer rapidement"
     ],
     "links": {
-      "github": "",
+      "github": "https://github.com/ThreatsHunterPro/DynamicSplineMesh",
       "demo": "",
       "docs": "https://docs.google.com/document/d/1PVMAUC3mPgJ2ipv6nVWWGZnsrAEYhEIz5Z5z_SookFM/edit"
     },
@@ -400,7 +400,7 @@
       "Réduction nette du nombre d'objets à traiter par le CPU et le GPU"
     ],
     "links": {
-      "github": "",
+      "github": "https://github.com/ThreatsHunterPro/FrustumCulling",
       "docs": "https://docs.google.com/document/d/1PVMAUC3mPgJ2ipv6nVWWGZnsrAEYhEIz5Z5z_SookFM/edit"
     },
     "content": [
@@ -950,5 +950,177 @@
         "caption": "Fiche d'un projet"
       }
     ]
+  },
+  {
+    "id": 19,
+    "slug": "the-forest-like",
+    "title": "TheForestLike",
+    "tagline": "Jeu de survie à la troisième personne sous Unity",
+    "summary": "Prototype de jeu de survie inspiré de The Forest : besoins vitaux, récolte, inventaire, craft et construction, dans un monde généré avec cycle jour/nuit.",
+    "domain": "game",
+    "category": "game",
+    "context": "Formation",
+    "year": 2022,
+    "duration": "Prototype",
+    "team": "Solo",
+    "role": "Gameplay programmer",
+    "status": "Prototype",
+    "featured": false,
+    "technologies": [
+      "C#",
+      "Unity",
+      "Shaders (HLSL)"
+    ],
+    "cover": null,
+    "highlights": [
+      "3C : caméras orbitale et TPS, déplacements et animations du personnage",
+      "Besoins du joueur (faim, soif) et ressources comestibles ou non",
+      "Inventaire, récolte, craft et construction (feu de camp)",
+      "Génération du monde et cycle jour/nuit",
+      "Ressources qui repoussent avec le temps"
+    ],
+    "links": {
+      "github": "https://github.com/ThreatsHunterPro/TheForestLike"
+    },
+    "content": [
+      {
+        "heading": "Le projet",
+        "paragraphs": [
+          "Prototype de jeu de survie sous Unity, inspiré de The Forest. Le joueur doit gérer ses besoins vitaux en récoltant des ressources, puis fabriquer et construire pour survivre dans un monde généré, rythmé par un cycle jour/nuit."
+        ]
+      },
+      {
+        "heading": "Architecture",
+        "list": [
+          "Comportements du personnage découplés : récolte, construction, vision",
+          "Inventaire générique à base de piles d'objets",
+          "Gestionnaires de caméras et de timers",
+          "Shaders personnalisés (ShaderLab / HLSL)"
+        ]
+      }
+    ],
+    "gallery": []
+  },
+  {
+    "id": 20,
+    "slug": "parkour",
+    "title": "Parkour",
+    "tagline": "Contrôleur de parkour piloté par une FSM",
+    "summary": "Système de déplacement parkour sous Unity : une machine à états et des capteurs d'environnement enchaînent course, saut, glissade, escalade et chute.",
+    "domain": "game",
+    "category": "game",
+    "context": "Formation",
+    "year": 2022,
+    "duration": "Prototype",
+    "team": "Solo",
+    "role": "Gameplay programmer",
+    "status": "Prototype",
+    "featured": false,
+    "technologies": [
+      "C#",
+      "Unity",
+      "FSM",
+      "Animation"
+    ],
+    "cover": null,
+    "highlights": [
+      "FSM dédiée aux déplacements : Moving, Jumping, Sliding, Falling, Crossing",
+      "Montée d'échelles et d'escaliers",
+      "Capteurs d'environnement pour détecter obstacles et prises",
+      "Nombreuses animations : sauts, glissades, suspensions, escalade"
+    ],
+    "links": {
+      "github": "https://github.com/ThreatsHunterPro/Parkour"
+    },
+    "content": [
+      {
+        "heading": "Le projet",
+        "paragraphs": [
+          "Prototype de contrôleur de personnage orienté parkour. Un « Brain » pilote une machine à états dont chaque état gère un type de déplacement, tandis qu'un composant de capteurs analyse l'environnement pour déclencher la bonne transition."
+        ]
+      }
+    ],
+    "gallery": []
+  },
+  {
+    "id": 21,
+    "slug": "sims-like",
+    "title": "SimsLike",
+    "tagline": "Placement d'objets sur grille et sauvegarde, façon Les Sims",
+    "summary": "Prototype Unity inspiré des Sims : placement de meubles sur une grille, interface de construction et système de sauvegarde binaire complet par profil utilisateur.",
+    "domain": "game",
+    "category": "game",
+    "context": "Formation",
+    "year": 2022,
+    "duration": "Prototype",
+    "team": "Solo",
+    "role": "Gameplay programmer",
+    "status": "Prototype",
+    "featured": false,
+    "technologies": [
+      "C#",
+      "Unity",
+      "Sérialisation"
+    ],
+    "cover": null,
+    "highlights": [
+      "Placement d'objets sur grille avec gestion du curseur",
+      "Caméra et interface de jeu dédiées",
+      "Sauvegarde binaire : transforms, environnement, interface",
+      "Profils utilisateur et chargement des parties"
+    ],
+    "links": {
+      "github": "https://github.com/ThreatsHunterPro/SimsLike"
+    },
+    "content": [
+      {
+        "heading": "Le projet",
+        "paragraphs": [
+          "Prototype de jeu de construction à la manière des Sims : le joueur place du mobilier (chaises, lampes, murs) sur une grille. L'accent est mis sur un système de sauvegarde et de chargement complet, découpé en modules (objets, environnement, interface, profils)."
+        ]
+      }
+    ],
+    "gallery": []
+  },
+  {
+    "id": 22,
+    "slug": "flight-tracker",
+    "title": "FlightTracker",
+    "tagline": "Application de bureau de suivi de vols en C# / WPF",
+    "summary": "Application Windows en WPF qui charge une base d'aéroports en JSON, gère vols et pilotes et calcule les trajets.",
+    "domain": "web",
+    "category": "desktop",
+    "context": "Formation",
+    "year": 2022,
+    "duration": "Projet court",
+    "team": "Solo",
+    "role": "Développeur C#",
+    "status": "Terminé",
+    "featured": false,
+    "technologies": [
+      "C#",
+      "WPF",
+      ".NET Framework",
+      "JSON"
+    ],
+    "cover": null,
+    "highlights": [
+      "Interface WPF (XAML)",
+      "Chargement d'une base d'aéroports en JSON (Newtonsoft.Json)",
+      "Modélisation vols, pilotes et aéroports",
+      "Calculs de vol isolés derrière une interface"
+    ],
+    "links": {
+      "github": "https://github.com/ThreatsHunterPro/FlightTracker"
+    },
+    "content": [
+      {
+        "heading": "Le projet",
+        "paragraphs": [
+          "Application de bureau Windows développée en C# avec WPF. Elle charge une liste d'aéroports depuis un fichier JSON, permet de créer des vols associés à des pilotes et calcule les informations de trajet."
+        ]
+      }
+    ],
+    "gallery": []
   }
 ]

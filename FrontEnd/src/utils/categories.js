@@ -1,4 +1,4 @@
-import { FiGlobe, FiCpu, FiTool, FiGrid } from "react-icons/fi";
+import { FiGlobe, FiCpu, FiTool, FiGrid, FiMonitor } from "react-icons/fi";
 import { IoGameControllerOutline } from "react-icons/io5";
 
 /**
@@ -17,6 +17,12 @@ export const CATEGORIES = {
     icon: FiGlobe,
     badge: "bg-sky-400/10 text-sky-200 ring-sky-400/25",
     gradient: "from-sky-400 via-brand-600 to-night-900",
+  },
+  desktop: {
+    label: "Application desktop",
+    icon: FiMonitor,
+    badge: "bg-cyan-400/10 text-cyan-200 ring-cyan-400/25",
+    gradient: "from-cyan-300 via-brand-600 to-night-900",
   },
   game: {
     label: "Jeu vidéo",

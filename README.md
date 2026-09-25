@@ -107,7 +107,7 @@ FrontEnd/
 ```
 
 * `domain` : `game` ou `web` — détermine la page (Jeu vidéo / Web) où le projet apparaît
-* `category` : `web`, `game`, `engine` ou `tool` (à étendre dans `FrontEnd/src/utils/categories.js`)
+* `category` : `web`, `desktop`, `game`, `engine` ou `tool` (à étendre dans `FrontEnd/src/utils/categories.js`)
 * `context` : `Prestation`, `Studio`, `Personnel` ou `Formation` ; `client` : optionnel, affiché à côté
 * `featured: true` : le projet apparaît sur la page d'accueil
 * `published: false` : brouillon, masqué du site
